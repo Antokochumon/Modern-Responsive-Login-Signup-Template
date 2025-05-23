@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -27,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     background: linear-gradient(135deg, #1a1a2e, #16213e);
 }
 
@@ -44,13 +43,22 @@ body {
     animation: pulse 15s infinite alternate;
 }
 
+/* Main Auth Container - Improved Responsiveness */
 .auth-container {
     position: relative;
     width: 100%;
     max-width: 420px;
-    padding: 2rem;
+    padding: 1rem;
     z-index: 1;
     perspective: 1000px;
+    margin: 0 auto;
+}
+
+/* Mobile-first adjustments */
+@media (min-width: 480px) {
+    .auth-container {
+        padding: 2rem;
+    }
 }
 
 .auth-forms {
@@ -69,16 +77,24 @@ body {
     background: var(--glass);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-radius: 20px;
+    border-radius: 16px;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-    padding: 2.5rem;
+    padding: 1.5rem;
     color: white;
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .glass-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
 }
 
 .signup-card {
@@ -109,34 +125,65 @@ body {
 
 .header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 480px) {
+    .header {
+        margin-bottom: 2rem;
+    }
 }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: white;
+}
+
+@media (min-width: 480px) {
+    .logo {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .logo i {
     margin-right: 0.5rem;
     color: var(--primary);
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 480px) {
+    .logo i {
+        font-size: 2.2rem;
+    }
 }
 
 .header h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
+@media (min-width: 480px) {
+    .header h2 {
+        font-size: 1.8rem;
+    }
+}
+
 .header p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 480px) {
+    .header p {
+        font-size: 0.9rem;
+    }
 }
 
 .auth-form {
@@ -146,66 +193,114 @@ body {
 
 .input-group {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 480px) {
+    .input-group {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .input-group input {
     width: 100%;
-    padding: 1rem 3rem 1rem 2.5rem;
+    padding: 0.9rem 2.8rem 0.9rem 2.3rem;
     background: rgba(255, 255, 255, 0.1);
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
     transition: all 0.3s ease;
 }
 
+@media (min-width: 480px) {
+    .input-group input {
+        padding: 1rem 3rem 1rem 2.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+}
+
 .input-group.floating input {
-    padding: 1.5rem 3rem 0.5rem 2.5rem;
+    padding: 1.3rem 2.8rem 0.4rem 2.3rem;
+}
+
+@media (min-width: 480px) {
+    .input-group.floating input {
+        padding: 1.5rem 3rem 0.5rem 2.5rem;
+    }
 }
 
 .input-group.floating label {
     position: absolute;
     top: 50%;
-    left: 2.5rem;
+    left: 2.3rem;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
+    font-size: 0.95rem;
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
+@media (min-width: 480px) {
+    .input-group.floating label {
+        left: 2.5rem;
+        font-size: 1rem;
+    }
+}
+
 .input-group.floating input:focus + label,
 .input-group.floating input:valid + label {
-    top: 0.5rem;
-    left: 2.5rem;
+    top: 0.4rem;
+    left: 2.3rem;
     transform: translateY(0);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--primary);
+}
+
+@media (min-width: 480px) {
+    .input-group.floating input:focus + label,
+    .input-group.floating input:valid + label {
+        top: 0.5rem;
+        left: 2.5rem;
+        font-size: 0.75rem;
+    }
 }
 
 .input-group i {
     position: absolute;
-    left: 1rem;
+    left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
-.input-group input:focus ~ i {
-    color: var(--primary);
+@media (min-width: 480px) {
+    .input-group i {
+        left: 1rem;
+        font-size: 1rem;
+    }
 }
 
 .toggle-password {
     position: absolute;
-    right: 1rem;
+    right: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 480px) {
+    .toggle-password {
+        right: 1rem;
+        font-size: 1rem;
+    }
 }
 
 .toggle-password:hover {
@@ -228,10 +323,20 @@ body {
 
 .options {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 480px) {
+    .options {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 .remember {
@@ -282,6 +387,13 @@ body {
     color: var(--secondary);
     text-decoration: none;
     transition: all 0.3s ease;
+    align-self: flex-end;
+}
+
+@media (min-width: 480px) {
+    .forgot {
+        align-self: center;
+    }
 }
 
 .forgot:hover {
@@ -294,15 +406,24 @@ body {
     background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
     border: none;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     transition: all 0.3s ease;
+}
+
+@media (min-width: 480px) {
+    .auth-btn {
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .auth-btn span {
@@ -328,9 +449,16 @@ body {
 .divider {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+}
+
+@media (min-width: 480px) {
+    .divider {
+        margin-bottom: 1.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 .divider::before,
@@ -345,23 +473,39 @@ body {
 .social-login {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 480px) {
+    .social-login {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .social-btn {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     border: none;
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 480px) {
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
 
 .social-btn:hover {
@@ -392,8 +536,14 @@ body {
 .switch-link {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     cursor: pointer;
+}
+
+@media (min-width: 480px) {
+    .switch-link {
+        font-size: 0.9rem;
+    }
 }
 
 .switch-link a {
@@ -441,94 +591,51 @@ body {
     z-index: -1;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
-    .auth-container {
+/* Extra Small Devices (phones < 360px) */
+@media (max-width: 359px) {
+    .glass-card {
         padding: 1rem;
     }
     
-    .glass-card {
-        padding: 1.5rem;
+    .header h2 {
+        font-size: 1.3rem;
     }
     
-    .header h2 {
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .logo i {
         font-size: 1.5rem;
     }
     
-    .social-login {
-        flex-wrap: wrap;
-    }
-}
-
-
-@media (max-width: 1152px) {
-    .auth-container {
-        padding: 1rem;
-        
+    .input-group input {
+        padding: 0.8rem 2.6rem 0.8rem 2rem;
     }
     
-    .glass-card {
-        padding: 1.5rem;
+    .input-group.floating input {
+        padding: 1.1rem 2.6rem 0.3rem 2rem;
     }
     
-    .header h2 {
-        font-size: 1.5rem;
+    .input-group.floating label {
+        left: 2rem;
     }
     
-    .social-login {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 1900px) {
-    .auth-container {
-        padding: 1px;
-        margin: auto;
-        
+    .input-group i {
+        left: 0.7rem;
     }
     
-    .glass-card {
-        padding: 1.5rem;
+    .toggle-password {
+        right: 0.7rem;
     }
     
-    .header h2 {
-        font-size: 1.5rem;
+    .auth-btn {
+        padding: 0.8rem;
     }
     
-    .social-login {
-        flex-wrap: wrap;
-    }
-}
-
-
-
-
-@media (max-width: 360px) {
-
-    .auth-container {
-        padding: 1rem;
-      
-    }
-    
-    .glass-card {
-        padding: 3rem;
-    }
-    
-    .header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .social-login {
-        flex-wrap: wrap;
-    }
-
-    .options {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    
-    .forgot {
-        align-self: flex-end;
+    .social-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
     }
 }
