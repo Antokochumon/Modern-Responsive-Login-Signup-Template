@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Auth UI Kit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    
+    <div class="auth-container">
+        <div class="auth-forms" id="authForms">
+            <!-- Login Form -->
+            <div class="glass-card login-card">
+                <div class="header">
+                    <div class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>NEBULA</span>
+                    </div>
+                    <h2>Welcome Back</h2>
+                    <p>Login to access your cosmic dashboard</p>
+                </div>
+                
+                <form class="auth-form login-form">
+                    <div class="input-group floating">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                        <i class="fas fa-envelope"></i>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="input-group floating">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                      
+                        <i class="fas fa-eye toggle-password" id="toggleLoginPassword"></i>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="options">
+                        <label class="remember">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <span>Login</span>
+                        <div class="hover-effect"></div>
+                    </button>
+                    
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn apple">
+                            <i class="fab fa-apple"></i>
+                        </button>
+                        <button type="button" class="social-btn github">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
+                    
+                    <p class="switch-link">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+                </form>
+            </div>
+            
+            <!-- Signup Form -->
+            <div class="glass-card signup-card">
+                <div class="header">
+                    <div class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>NEBULA</span>
+                    </div>
+                    <h2>Create Account</h2>
+                    <p>Join our cosmic community</p>
+                </div>
+                
+                <form class="auth-form signup-form">
+                    <div class="input-group floating">
+                        <input type="text" id="name" required>
+                        <label for="name">Full Name</label>
+                        <i class="fas fa-user"></i>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="input-group floating">
+                        <input type="email" id="signup-email" required>
+                        <label for="signup-email">Email</label>
+                        <i class="fas fa-envelope"></i>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="input-group floating">
+                        <input type="password" id="signup-password" required>
+                        <label for="signup-password">Password</label>
+                       
+                        <i class="fas fa-eye toggle-password" id="toggleSignupPassword"></i>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="input-group floating">
+                        <input type="password" id="confirm-password" required>
+                        <label for="confirm-password">Confirm Password</label>
+                       
+                        <i class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="options">
+                        <label class="remember">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" style="color: var(--secondary);">Terms</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <span>Sign Up</span>
+                        <div class="hover-effect"></div>
+                    </button>
+                    
+                    <div class="divider">
+                        <span>or sign up with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn apple">
+                            <i class="fab fa-apple"></i>
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button type="button" class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                    </div>
+                    
+                    <p class="switch-link">Already have an account? <a href="#" id="showLogin">Login</a></p>
+                </form>
+            </div>
+        </div>
+        
+        <div class="particles" id="particles-js"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
